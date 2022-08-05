@@ -1,8 +1,14 @@
 import express from "express";
+import cors from "cors";
 import { graphqlHTTP } from "express-graphql";
 import { schema } from "./schema";
 
+/*changeOrigin": true*/
+
 const app = express();
+const whileList = ["http://localhost:4200/"];
+
+app.use(cors({ origin: whileList }));
 
 app.use(
   "/graphsql",
@@ -11,6 +17,9 @@ app.use(
     schema: schema,
   })
 );
+
+
+
 
 export default app;
 //txt

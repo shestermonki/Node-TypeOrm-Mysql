@@ -12,6 +12,16 @@ export const GET_ALL_USERS = {
   },
 };
 
+/**
+ * query{
+  getAllUsers{
+    id
+    name
+    username
+    password
+  }
+}
+ */
 export const GET_USER = {
   type: UserType,
   args: {
