@@ -3,8 +3,6 @@ import cors from "cors";
 import { graphqlHTTP } from "express-graphql";
 import { schema } from "./schema";
 
-/*changeOrigin": true*/
-
 const app = express();
 const whileList = ["http://localhost:4200/"];
 
